@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HookSide</title>
+
+  <!-- FavIcon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../pictures/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../pictures/icon/favicon-16x16.png">
+  <link rel="manifest" href="../pictures/icon/site.webmanifest">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+/* FIXED CAROUSEL HEIGHT SO LAYOUT NEVER BREAKS */
+#productCarousel,
+#productCarousel .carousel-inner,
+#productCarousel .carousel-item {
+
+}
+
+#productCarousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zoom container */
+.zoom-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-container img {
+  transition: transform 0.2s ease;
+  cursor: zoom-in;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../pictures/logo.png" alt="HookSide Logo" class="logo-img me-2" style="height:50px;">
+        <span class="logo-text fs-3 fw-bold">HookSide</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-dark" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="../about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="https://www.facebook.com/hOokSiDe" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- PRODUCT PAGE -->
+<main class="container my-5 pt-5">
+  <div class="row g-4 align-items-start">
+
+    <!-- IMAGE CAROUSEL -->
+    <div class="col-md-6">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- IMAGE 1 -->
+          <div class="carousel-item active">
+            <div class="zoom-container">
+              <img src="top-images/laceflowertop1.jpg" alt="Product Image">
+            </div>
+          </div>
+
+          
+
+
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div class="col-md-6 d-flex flex-column">
+      <h1 class="fw-bold">Lace Flower Top</h1>
+      <h3 class="mt-3 price">₱350</h3>
+
+      <p class="mt-4">
+        Handmade crochet corset top made with soft yarn.
+        Fits well and perfect for customizing your style.
+      </p>
+
+      <a href="https://www.facebook.com/hOokSiDe" target="_blank" class="btn btn-primary btn-lg mt-3">
+        Message to Order
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-light text-center shadow-sm mt-5">
+  <div class="container">
+    <p class="mb-2">© 2025 HookSide. All rights reserved.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://www.facebook.com/hOokSiDe" target="_blank" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/hook_side" target="_blank" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/@sophiaandreadededios" target="_blank" class="text-dark fs-4"><i class="bi bi-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Zoom JS -->
+<script>
+document.querySelectorAll(".zoom-container img").forEach(img => {
+  img.addEventListener("mousemove", function(e) {
+    const rect = img.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    img.style.transformOrigin = `${x}% ${y}%`;
+    img.style.transform = "scale(2)";
+  });
+
+  img.addEventListener("mouseleave", function() {
+    img.style.transform = "scale(1)";
+  });
+});
+</script>
+
+</body>
+</html>

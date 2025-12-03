@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HookSide</title>
+
+  <!-- FavIcon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="pictures/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="pictures/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="pictures/icon/favicon-16x16.png">
+  <link rel="manifest" href="pictures/icon/site.webmanifest">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="pictures/logo.png" alt="HookSide Logo" class="logo-img me-2" style="height:50px;">
+        <span class="logo-text fs-3 fw-bold">HookSide</span>
+      </a>
+
+      <!-- Hamburger toggle button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="https://www.facebook.com/hOokSiDe" target="_blank">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ABOUT SECTION -->
+<main class="container my-5">
+
+  <h1 class="text-center mb-4">About HookSide</h1>
+
+  <div class="section-box">
+    <h3 class="mb-3">Our Story</h3>
+    <p>
+      HookSide began with a simple love for crocheting and the joy of creating handmade pieces that bring warmth, color,
+      and personality into everyday life. What started as a hobby soon grew into a passion — and eventually into a small business
+      that celebrates creativity, craftsmanship, and sustainable fashion.
+    </p>
+    <p>
+      Every item we offer is carefully handmade, stitched with patience, dedication, and a whole lot of heart.
+      From bucket hats to bags, accessories, keychains, shrugs, and more — each piece is crafted to help you express your unique style.
+    </p>
+  </div>
+
+  <div class="section-box mt-4">
+    <h3 class="mb-3">Our Mission</h3>
+    <p>
+      To provide beautifully handcrafted crochet items that inspire self-expression, comfort, and confidence — while promoting slow fashion
+      and mindful craftsmanship.
+    </p>
+
+    <h3 class="mt-4 mb-3">Our Vision</h3>
+    <p>
+      To become a trusted crochet brand known for quality, creativity, and heartfelt handmade pieces that customers can cherish and enjoy.
+    </p>
+  </div>
+
+  <div class="section-box mt-4">
+    <h3 class="mb-3">Meet the Maker</h3>
+    <p>
+      HookSide is proudly handmade in the Philippines. Behind every stitch is passion, creativity, and the desire to create pieces
+      that make people smile. Thank you for supporting handmade!
+    </p>
+
+    <a href="https://www.facebook.com/sophiaandreadedios" target="_blank" class="btn btn-fb btn-lg mt-3">
+      Message Us on Facebook
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-light text-center shadow-sm mt-5">
+  <div class="container">
+    <p class="mb-2">© 2025 HookSide. All rights reserved.</p>
+
+    <!-- Social Icons -->
+    <div class="d-flex justify-content-center gap-3">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/hOokSiDe" target="_blank" class="text-dark fs-4">
+        <i class="bi bi-facebook"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/YOURIG" target="_blank" class="text-dark fs-4">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@YOURTIKTOK" target="_blank" class="text-dark fs-4">
+        <i class="bi bi-tiktok"></i>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Burger JS -->
+<script>
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if(window.scrollY > 50){
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
+</script>
+</body>
+</html>
